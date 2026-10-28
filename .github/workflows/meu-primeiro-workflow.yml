@@ -1,6 +1,10 @@
 name: Primeiro Workflow Linuxtips
 
 on:
+  push:
+    branchs:
+      - main
+jobs:
   giropops:
     runs-on: ubuntu-latest
     steps:
