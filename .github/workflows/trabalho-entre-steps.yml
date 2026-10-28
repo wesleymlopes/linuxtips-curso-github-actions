@@ -1,4 +1,4 @@
-name: Primeiro Workflow Linuxtips
+name: Segundo Workflow Linuxtips
 
 on:
   push:
