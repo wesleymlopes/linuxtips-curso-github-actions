@@ -12,7 +12,7 @@ jobs:
         run: cat /etc/os-release
 
       - name: Exibir uma mensagem
-        run: echo "Estou fazendo o curso de Github" > mensagem.
+        run: echo "Estou fazendo o curso de Github" > mensagem.txt
         
       - uses: actions/upload-artifact@v4
         with:
