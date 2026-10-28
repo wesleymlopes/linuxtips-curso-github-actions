@@ -20,7 +20,7 @@ jobs:
           path: mensagem.txt
 
   entre-jobs_2:
-    runs-on: ubuntu-
+    runs-on: ubuntu-latest
     steps:
       - name: Ver conteudo do diretorio
         run: ls -lha
