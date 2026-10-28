@@ -32,7 +32,7 @@ jobs:
           path: mensagem.txt
 
       - name: Ver conteudo do diretorio
-        run: ls -lha strigus
+        run: ls -lha 
 
       - name: Acessando Arquivo
         run: cat strigus/mensagem.txt
