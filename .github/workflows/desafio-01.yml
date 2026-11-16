@@ -32,7 +32,6 @@ jobs:
           command: cves,recommendations,compare
           image: ${{inputs.image_name}}
           to-latest: true
-          ignore-base: true
           ignore-unchanged: true
           only-fixed: true
           summary: true
