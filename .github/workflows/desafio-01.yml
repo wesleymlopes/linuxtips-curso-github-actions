@@ -13,28 +13,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: recebendo name image docker
         run: docker pull ${{ inputs.image_name}}
 
       - name: listando imagens
-        run: docker image ls | grep alpine
-
-      - name: Login to Docker Hub
-        uses: docker/login-action@v3
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+        run: | 
+          IMAGE_NAME=$(echo "${{ inputs.image_name}}" | cut -d ':' -f 1)
+          docker image ls | grep $IMAGE_NAME
 
       - name: Docker Scout
-        id: docker-scout
         uses: docker/scout-action@v1
         with:
-          command: cves
           image: ${{inputs.image_name}}
-          to-latest: true
-          ignore-unchanged: true
-          only-fixed: true
-          summary: true
-          format: json
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          write-comment: true
+          only-severities: critical,high
