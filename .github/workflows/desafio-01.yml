@@ -10,11 +10,11 @@ on:
 
 jobs:
   Docker_image:
-  runs-on: ubuntu-latest
-  steps:
+    runs-on: ubuntu-latest
+    steps:
 
-    - name: recebendo name image docker
-      run: docker pull ${{ inputs.image_name}}
+      - name: recebendo name image docker
+        run: docker pull ${{ inputs.image_name}}
 
-    - name: listando imagens
-      run: docker image ls
+      - name: listando imagens
+        run: docker image ls
