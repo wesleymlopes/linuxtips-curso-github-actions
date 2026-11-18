@@ -1,9 +1,8 @@
 name: Trabalho entre Jobs
 
 on:
-  push:
-    branchs:
-      - main
+  workflow_dispatch:
+
 jobs:
   entre-jobs_1:
     runs-on: ubuntu-latest
