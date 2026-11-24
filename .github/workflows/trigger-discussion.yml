@@ -2,7 +2,7 @@ name: Criando nosso trigger discussion
 
 on:
   discussion:
-    type: [created, edited. answered]
+    type: [created, edited, answered]
 
 jobs:
   job-deployment:
