@@ -1,0 +1,11 @@
+name: Criando nosso trigger gollum
+
+on:
+  gollum:
+
+jobs:
+  job-deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Printa gollum
+        run: echo "Esse job foi trigado por um gollum"
